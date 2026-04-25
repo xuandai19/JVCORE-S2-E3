@@ -52,22 +52,33 @@ public class Main {
 //            }
 //            System.out.printf("Tổng các số từ 1 đén %d là: %d", n, sum);
 //            }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Nhập tháng: ");
+//        int month = sc.nextInt();
+//
+//        switch (month) {
+//            case 1, 3, 5, 7, 8, 10, 12:
+//                System.out.printf("Tháng %d có 31 ngày", month);
+//                break;
+//            case 4, 6, 9, 11:
+//                System.out.printf("Tháng %d có 30 ngày", month);
+//                break;
+//            case 2:
+//                System.out.printf("Tháng %d có 28 hoặc 29 ngày", month);
+//                break;
+//            default:
+//                System.out.print("Tháng không hợp lệ");
+//        }
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhập tháng: ");
-        int month = sc.nextInt();
+        System.out.print("Nhập n: ");
+        int n = sc.nextInt();
 
-        switch (month) {
-            case 1, 3, 5, 7, 8, 10, 12:
-                System.out.printf("Tháng %d có 31 ngày", month);
-                break;
-            case 4, 6, 9, 11:
-                System.out.printf("Tháng %d có 30 ngày", month);
-                break;
-            case 2:
-                System.out.printf("Tháng %d có 28 hoặc 29 ngày", month);
-                break;
-            default:
-                System.out.print("Tháng không hợp lệ");
+        n = Math.abs(n);
+        int sum = 0;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
         }
+        System.out.print("Tổng các chữ số là: " + sum);
     }
 }
